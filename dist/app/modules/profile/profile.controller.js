@@ -16,7 +16,11 @@ exports.profileController = void 0;
 const catchAsync_1 = __importDefault(require("../../../utils/catchAsync"));
 const sendResponse_1 = __importDefault(require("../../../utils/sendResponse"));
 const profile_services_1 = require("./profile.services");
+const appError_1 = __importDefault(require("../../../utils/appError"));
 const profile = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    if (!req.user) {
+        throw new appError_1.default(401, "You are not authorized");
+    }
     const result = yield profile_services_1.profileServices.profile(req.user);
     (0, sendResponse_1.default)(res, {
         statusCode: 200,

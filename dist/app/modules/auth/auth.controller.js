@@ -16,6 +16,7 @@ exports.authController = void 0;
 const auth_services_1 = require("./auth.services");
 const catchAsync_1 = __importDefault(require("../../../utils/catchAsync"));
 const sendResponse_1 = __importDefault(require("../../../utils/sendResponse"));
+const appError_1 = __importDefault(require("../../../utils/appError"));
 const register = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield auth_services_1.authServices.register(req.body);
     (0, sendResponse_1.default)(res, {
@@ -43,6 +44,9 @@ const forgotPassword = (0, catchAsync_1.default)((req, res) => __awaiter(void 0,
 }));
 //change password
 const changePassword = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    if (!req.user) {
+        throw new appError_1.default(401, "You are not authorized");
+    }
     const result = yield auth_services_1.authServices.changePassword({
         payload: req.body,
         user: req.user,

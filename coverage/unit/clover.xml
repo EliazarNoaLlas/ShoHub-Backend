@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1775664446102" clover="3.2.0">
-  <project timestamp="1775664446102" name="All files">
-    <metrics statements="722" coveredstatements="8" conditionals="53" coveredconditionals="4" methods="237" coveredmethods="1" elements="1012" coveredelements="13" complexity="0" loc="722" ncloc="722" packages="20" files="55" classes="55"/>
+<coverage generated="1775664680688" clover="3.2.0">
+  <project timestamp="1775664680688" name="All files">
+    <metrics statements="728" coveredstatements="8" conditionals="55" coveredconditionals="4" methods="237" coveredmethods="1" elements="1020" coveredelements="13" complexity="0" loc="728" ncloc="728" packages="20" files="55" classes="55"/>
     <package name="src">
       <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app.ts">
@@ -163,29 +163,32 @@
       </file>
     </package>
     <package name="src.app.modules.auth">
-      <metrics statements="79" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="20" coveredmethods="0"/>
+      <metrics statements="82" coveredstatements="0" conditionals="13" coveredconditionals="0" methods="20" coveredmethods="0"/>
       <file name="auth.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\auth\auth.controller.ts">
-        <metrics statements="20" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <metrics statements="23" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="10" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="41" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
       </file>
       <file name="auth.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\auth\auth.route.ts">
         <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -671,16 +674,19 @@
       </file>
     </package>
     <package name="src.app.modules.profile">
-      <metrics statements="19" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="22" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="profile.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\profile\profile.controller.ts">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
       </file>
       <file name="profile.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\profile\profile.route.ts">
         <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1775664741274" clover="3.2.0">
+  <project timestamp="1775664741274" name="All files">
+    <metrics statements="728" coveredstatements="327" conditionals="55" coveredconditionals="8" methods="237" coveredmethods="6" elements="1020" coveredelements="341" complexity="0" loc="728" ncloc="728" packages="20" files="55" classes="55"/>
+    <package name="src">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.middleware">
+      <metrics statements="53" coveredstatements="18" conditionals="13" coveredconditionals="0" methods="9" coveredmethods="3"/>
+      <file name="authGaurd.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\middleware\authGaurd.ts">
+        <metrics statements="21" coveredstatements="7" conditionals="5" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+      <file name="globalErrorHandler.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\middleware\globalErrorHandler.ts">
+        <metrics statements="23" coveredstatements="4" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+      </file>
+      <file name="notFound.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\middleware\notFound.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="validateRequest.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\middleware\validateRequest.ts">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.address">
+      <metrics statements="30" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="address.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\address\address.controller.ts">
+        <metrics statements="14" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
+      <file name="address.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\address\address.route.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="address.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\address\address.services.ts">
+        <metrics statements="11" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.adminData">
+      <metrics statements="20" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="adminData.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\adminData\adminData.controller.ts">
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="adminData.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\adminData\adminData.route.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+      <file name="adminData.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\adminData\adminData.services.ts">
+        <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.auth">
+      <metrics statements="82" coveredstatements="33" conditionals="13" coveredconditionals="0" methods="20" coveredmethods="0"/>
+      <file name="auth.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\auth\auth.controller.ts">
+        <metrics statements="23" coveredstatements="10" conditionals="1" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+      </file>
+      <file name="auth.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\auth\auth.route.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="auth.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\auth\auth.services.ts">
+        <metrics statements="48" coveredstatements="12" conditionals="12" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="92" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="108" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="136" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="151" count="0" type="stmt"/>
+        <line num="152" count="0" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="158" count="1" type="stmt"/>
+        <line num="159" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="160" count="0" type="stmt"/>
+        <line num="163" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="164" count="0" type="stmt"/>
+        <line num="167" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="177" count="0" type="stmt"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="192" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.checkout">
+      <metrics statements="23" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="checkout.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\checkout\checkout.controller.ts">
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="checkout.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\checkout\checkout.route.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="checkout.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\checkout\checkout.services.ts">
+        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.featuredProduct">
+      <metrics statements="51" coveredstatements="23" conditionals="1" coveredconditionals="0" methods="22" coveredmethods="0"/>
+      <file name="fp.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\featuredProduct\fp.controller.ts">
+        <metrics statements="22" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+      </file>
+      <file name="fp.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\featuredProduct\fp.route.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="fp.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\featuredProduct\fp.services.ts">
+        <metrics statements="23" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.offeredProduct">
+      <metrics statements="54" coveredstatements="23" conditionals="2" coveredconditionals="0" methods="22" coveredmethods="0"/>
+      <file name="op.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\offeredProduct\op.controller.ts">
+        <metrics statements="22" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+      </file>
+      <file name="op.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\offeredProduct\op.route.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="op.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\offeredProduct\op.services.ts">
+        <metrics statements="26" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.order">
+      <metrics statements="67" coveredstatements="26" conditionals="2" coveredconditionals="0" methods="27" coveredmethods="0"/>
+      <file name="order.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\order\order.controller.ts">
+        <metrics statements="25" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+      </file>
+      <file name="order.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\order\order.route.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+      <file name="order.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\order\order.services.ts">
+        <metrics statements="35" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="15" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="105" count="1" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="117" count="1" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="132" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.product">
+      <metrics statements="102" coveredstatements="40" conditionals="5" coveredconditionals="0" methods="35" coveredmethods="0"/>
+      <file name="product.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\product\product.controller.ts">
+        <metrics statements="34" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+      </file>
+      <file name="product.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\product\product.route.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+      <file name="product.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\product\product.services.ts">
+        <metrics statements="52" coveredstatements="12" conditionals="5" coveredconditionals="0" methods="19" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="124" count="0" type="stmt"/>
+        <line num="127" count="1" type="stmt"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="138" count="1" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="145" count="0" type="stmt"/>
+        <line num="148" count="1" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="158" count="0" type="stmt"/>
+        <line num="160" count="1" type="stmt"/>
+        <line num="161" count="0" type="stmt"/>
+        <line num="164" count="0" type="stmt"/>
+        <line num="165" count="0" type="stmt"/>
+        <line num="167" count="0" type="stmt"/>
+        <line num="175" count="0" type="stmt"/>
+        <line num="177" count="1" type="stmt"/>
+      </file>
+      <file name="product.validation.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\product\product.validation.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.productCuppon">
+      <metrics statements="45" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="20" coveredmethods="0"/>
+      <file name="pc.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\productCuppon\pc.controller.ts">
+        <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+      </file>
+      <file name="pc.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\productCuppon\pc.route.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="pc.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\productCuppon\pc.services.ts">
+        <metrics statements="17" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.profile">
+      <metrics statements="22" coveredstatements="16" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="profile.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\profile\profile.controller.ts">
+        <metrics statements="10" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="profile.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\profile\profile.route.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="profile.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\profile\profile.services.ts">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.review">
+      <metrics statements="57" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="23" coveredmethods="0"/>
+      <file name="review.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\review\review.controller.ts">
+        <metrics statements="22" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+      </file>
+      <file name="review.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\review\review.route.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="review.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\review\review.services.ts">
+        <metrics statements="24" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+      </file>
+      <file name="review.validation.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\review\review.validation.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.modules.user">
+      <metrics statements="53" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="24" coveredmethods="0"/>
+      <file name="user.controller.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\user\user.controller.ts">
+        <metrics statements="25" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+      </file>
+      <file name="user.route.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\user\user.route.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="user.services.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\modules\user\user.services.ts">
+        <metrics statements="20" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="110" count="0" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.routes">
+      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\routes\index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="routeArray.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\app\routes\routeArray.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.config">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\config\index.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.db">
+      <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="4" methods="0" coveredmethods="0"/>
+      <file name="db.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\db\db.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="4" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+      </file>
+    </package>
+    <package name="src.helpers">
+      <metrics statements="21" coveredstatements="8" conditionals="13" coveredconditionals="4" methods="4" coveredmethods="1"/>
+      <file name="fileUploader.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\helpers\fileUploader.ts">
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="orderBy.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\helpers\orderBy.ts">
+        <metrics statements="3" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="pagination.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\helpers\pagination.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+      <file name="sendEmail.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\helpers\sendEmail.ts">
+        <metrics statements="6" coveredstatements="3" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
+      </file>
+    </package>
+    <package name="src.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="express.d.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\types\express.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="11" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <file name="appError.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\utils\appError.ts">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="catchAsync.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\utils\catchAsync.ts">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="48" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="sendResponse.ts" path="C:\Users\infoe\WebstormProjects\gadget-galaxy-backend\src\utils\sendResponse.ts">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
