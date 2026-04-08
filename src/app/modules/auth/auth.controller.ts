@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { authServices } from "./auth.services";
 import catchAsync from "../../../utils/catchAsync";
 import sendResponse from "../../../utils/sendResponse";
+import AppError from "../../../utils/appError";
 
 const register = catchAsync(async (req: Request, res: Response) => {
 	const result = await authServices.register(req.body);
@@ -36,6 +37,10 @@ const forgotPassword = catchAsync(async (req: Request, res: Response) => {
 
 //change password
 const changePassword = catchAsync(async (req: Request, res: Response) => {
+	if (!req.user) {
+		throw new AppError(401, "You are not authorized");
+	}
+
 	const result = await authServices.changePassword({
 		payload: req.body,
 		user: req.user,
