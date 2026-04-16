@@ -1,0 +1,147 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+@ts = {{$timestamp}}
+@testEmail = http_test_order_{{ts}}@example.com
+@testPassword = Passw0rd!{{ts}}
+
+###
+# @name Orders_Register_201
+POST {{baseUrl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Order User {{ts}}",
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}"
+}
+
+> {%
+  client.test("register: 201", () => client.assert(response.status === 201));
+  client.global.set("userId", response.body.result.id);
+%}
+
+###
+# @name Orders_CreateProduct_201
+POST {{baseUrl}}/product/
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Order Product {{ts}}",
+  "description": "Product for order tests",
+  "price": 100,
+  "regularPrice": 120,
+  "inStock": 1,
+  "photo": "https://example.com/order-product-{{ts}}.png",
+  "brand": "BrandO",
+  "processor_type": "AMD",
+  "processor_model": "Ryzen 5",
+  "generation": "5th",
+  "display": "FHD",
+  "display_size": "14",
+  "display_type": "IPS",
+  "ram": "8GB",
+  "ram_type": "DDR4",
+  "hdd": "0",
+  "ssd": "256GB",
+  "graphics": "Integrated",
+  "operating_system": "Linux",
+  "features": ["wifi"]
+}
+
+> {%
+  client.test("create product: 201", () => client.assert(response.status === 201));
+  client.global.set("productId", response.body.result.id);
+%}
+
+###
+# @name Orders_Create_400_InsufficientStock
+POST {{baseUrl}}/order/
+Content-Type: {{contentType}}
+
+{
+  "userId": "{{userId}}",
+  "totalPrice": 200,
+  "items": [
+    {
+      "productId": "{{productId}}",
+      "name": "HTTP Order Product {{ts}}",
+      "price": 100,
+      "quantity": 2
+    }
+  ]
+}
+
+> {%
+  client.test("order with insufficient stock: 400", () => client.assert(response.status === 400));
+%}
+
+###
+# @name Orders_Create_201
+POST {{baseUrl}}/order/
+Content-Type: {{contentType}}
+
+{
+  "userId": "{{userId}}",
+  "totalPrice": 100,
+  "items": [
+    {
+      "productId": "{{productId}}",
+      "name": "HTTP Order Product {{ts}}",
+      "price": 100,
+      "quantity": 1
+    }
+  ]
+}
+
+> {%
+  client.test("create order: 201", () => client.assert(response.status === 201));
+  client.global.set("orderId", response.body.result.id);
+%}
+
+###
+# @name Orders_GetAll_200
+GET {{baseUrl}}/order/
+
+> {%
+  client.test("get all orders: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Orders_Latest_200
+GET {{baseUrl}}/order/latest-order
+
+> {%
+  client.test("latest orders: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# Nota: este endpoint usa el `:id` como userId y devuelve sus orders (ver `order.services.ts`).
+# @name Orders_GetByUserId_200
+GET {{baseUrl}}/order/{{userId}}
+
+> {%
+  client.test("get orders by userId: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Orders_Update_200
+PATCH {{baseUrl}}/order/{{orderId}}
+Content-Type: {{contentType}}
+
+{
+  "totalPrice": 101
+}
+
+> {%
+  client.test("update order: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Orders_Delete_200
+DELETE {{baseUrl}}/order/{{orderId}}
+
+> {%
+  client.test("delete order: 200", () => client.assert(response.status === 200));
+%}
+

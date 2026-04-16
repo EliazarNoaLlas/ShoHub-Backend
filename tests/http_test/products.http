@@ -1,0 +1,229 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+@ts = {{$timestamp}}
+@testEmail = http_test_admin_{{ts}}@example.com
+@testPassword = Passw0rd!{{ts}}
+
+###
+# @name Products_Register_201
+POST {{baseUrl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Admin {{ts}}",
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}"
+}
+
+> {%
+  client.test("register: 201", () => client.assert(response.status === 201));
+  client.global.set("userId", response.body.result.id);
+%}
+
+###
+# Subir rol a ADMIN (en el codigo actual el endpoint no esta protegido)
+# @name Products_MakeAdmin_200
+PATCH {{baseUrl}}/user/{{userId}}
+Content-Type: {{contentType}}
+
+{
+  "role": "ADMIN"
+}
+
+> {%
+  client.test("make admin: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_Login_Admin_200
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}"
+}
+
+> {%
+  client.test("login: 200", () => client.assert(response.status === 200));
+  client.global.set("adminToken", response.body.result.authToken);
+%}
+
+###
+# @name Products_Create_400_ValidationError
+POST {{baseUrl}}/product/
+Content-Type: {{contentType}}
+
+{
+  "description": "missing name should fail",
+  "price": 999,
+  "regularPrice": 1099,
+  "inStock": 10,
+  "photo": "https://example.com/p.png",
+  "brand": "BrandX",
+  "processor_type": "Intel",
+  "processor_model": "i7",
+  "generation": "12th",
+  "display": "FHD",
+  "display_size": "15.6",
+  "display_type": "IPS",
+  "ram": "16GB",
+  "ram_type": "DDR5",
+  "hdd": "0",
+  "ssd": "512GB",
+  "graphics": "Iris Xe",
+  "operating_system": "Windows 11",
+  "features": ["wifi", "bt"]
+}
+
+> {%
+  client.test("create product invalid: 400", () => client.assert(response.status === 400));
+%}
+
+###
+# @name Products_Create_201
+POST {{baseUrl}}/product/
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Product {{ts}}",
+  "description": "Test product created via .http",
+  "price": 999,
+  "regularPrice": 1099,
+  "inStock": 10,
+  "photo": "https://example.com/product-{{ts}}.png",
+  "brand": "BrandX",
+  "processor_type": "Intel",
+  "processor_model": "i7-12700H",
+  "generation": "12th",
+  "display": "FHD",
+  "display_size": "15.6",
+  "display_type": "IPS",
+  "ram": "16GB",
+  "ram_type": "DDR5",
+  "hdd": "0",
+  "ssd": "512GB",
+  "graphics": "Iris Xe",
+  "operating_system": "Windows 11",
+  "features": ["wifi", "bt", "usb-c"]
+}
+
+> {%
+  client.test("create product: 201", () => client.assert(response.status === 201));
+  client.global.set("productId", response.body.result.id);
+  client.global.set("productSlug", response.body.result.slug);
+%}
+
+###
+# @name Products_GetAll_200
+GET {{baseUrl}}/product/?page=1&limit=5
+
+> {%
+  client.test("list products: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_GetAll_FilterSearch_200
+GET {{baseUrl}}/product/?search=HTTP%20Product&page=1&limit=5
+
+> {%
+  client.test("list products with search: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_GetBySlug_200
+GET {{baseUrl}}/product/{{productSlug}}
+
+> {%
+  client.test("get product by slug: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_RelatedBySlug_200
+GET {{baseUrl}}/product/related-product/{{productSlug}}
+
+> {%
+  client.test("related products: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_AdminGetById_200
+GET {{baseUrl}}/product/admin/{{productId}}
+
+> {%
+  client.test("admin get by id (no auth in route): 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_Update_401_NoAuth
+PATCH {{baseUrl}}/product/{{productId}}
+Content-Type: {{contentType}}
+
+{
+  "price": 950
+}
+
+> {%
+  client.test("update product without auth: 401", () => client.assert(response.status === 401));
+%}
+
+###
+# Nota: el controller pasa `slug` pero el service actualiza por `id` (bug).
+# Caso 1: usando el slug real suele dar 404.
+# @name Products_Update_BySlug_404
+PATCH {{baseUrl}}/product/{{productSlug}}
+Content-Type: {{contentType}}
+Authorization: {{adminToken}}
+
+{
+  "price": 950
+}
+
+> {%
+  client.test("update by slug (bug): 404", () => client.assert(response.status === 404));
+%}
+
+###
+# Caso 2: pasando el id en el param ":slug" funciona.
+# @name Products_Update_ById_200
+PATCH {{baseUrl}}/product/{{productId}}
+Content-Type: {{contentType}}
+Authorization: {{adminToken}}
+
+{
+  "price": 950
+}
+
+> {%
+  client.test("update by id: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Products_SoftDelete_200
+DELETE {{baseUrl}}/product/soft/{{productId}}
+Authorization: {{adminToken}}
+
+> {%
+  client.test("soft delete: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# Delete definitivo (mismo bug que update: endpoint dice ":slug" pero usa id en el service)
+# @name Products_Delete_BySlug_404
+DELETE {{baseUrl}}/product/{{productSlug}}
+Authorization: {{adminToken}}
+
+> {%
+  client.test("delete by slug (bug): 404", () => client.assert(response.status === 404));
+%}
+
+###
+# @name Products_Delete_ById_200
+DELETE {{baseUrl}}/product/{{productId}}
+Authorization: {{adminToken}}
+
+> {%
+  client.test("delete by id: 200", () => client.assert(response.status === 200));
+%}
+

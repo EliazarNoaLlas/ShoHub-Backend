@@ -59,11 +59,16 @@ const register = async (payload: User) => {
 };
 
 const login = async (payload: TLoginPayload) => {
-	const user = await prisma.user.findUniqueOrThrow({
+	const user = await prisma.user.findUnique({
 		where: {
 			email: payload.email,
 		},
 	});
+
+	if (!user) {
+		// Avoid Prisma P2025 bubbling up as "ID is not found" for a non-existent email.
+		throw new AppError(404, "User not found");
+	}
 	const correctPass = await bcrypt.compare(payload.password, user.password);
 
 	if (!correctPass) {

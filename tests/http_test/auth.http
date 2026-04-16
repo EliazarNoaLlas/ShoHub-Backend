@@ -1,0 +1,114 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+# Variables de test (email unico por timestamp)
+@ts = {{$timestamp}}
+@testEmail = http_test_user_{{ts}}@example.com
+@testPassword = Passw0rd!{{ts}}
+
+###
+# @name AuthRegister_201
+POST {{baseUrl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+  "name": "Eliazar",
+  "email": "infoeliasar@gmail.com",
+  "password": "12345678",
+  "phone": "917432403"
+}
+
+> {%
+  client.test("register: status 201", () => client.assert(response.status === 201));
+  client.global.set("userId", response.body.result.id);
+  client.global.set("userEmail", "{{testEmail}}");
+  client.global.set("userPassword", "{{testPassword}}");
+%}
+
+###
+# @name AuthLogin_200
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "infoeliasar12@gmail.com",
+  "password": "12345678"
+}
+
+> {%
+  client.test("login: status 200", () => client.assert(response.status === 200));
+  client.global.set("customerToken", response.body.result.authToken);
+%}
+
+###
+# @name AuthChangePassword_401_NoAuth
+POST {{baseUrl}}/auth/change-password
+Content-Type: {{contentType}}
+
+{
+  "oldPassword": "{{testPassword}}",
+  "newPassword": "NewPassw0rd!{{ts}}"
+}
+
+> {%
+  client.test("change-password without auth: 401", () => client.assert(response.status === 401));
+%}
+
+###
+# @name AuthChangePassword_200
+POST {{baseUrl}}/auth/change-password
+Content-Type: {{contentType}}
+Authorization: {{customerToken}}
+
+{
+  "oldPassword": "{{testPassword}}",
+  "newPassword": "NewPassw0rd!{{ts}}"
+}
+
+> {%
+  client.test("change-password: status 200", () => client.assert(response.status === 200));
+  client.global.set("userPassword", "NewPassw0rd!{{ts}}");
+%}
+
+###
+# @name AuthLogin_200_AfterPasswordChange
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "{{testEmail}}",
+  "password": "NewPassw0rd!{{ts}}"
+}
+
+> {%
+  client.test("login after password change: 200", () => client.assert(response.status === 200));
+  client.global.set("customerToken", response.body.result.authToken);
+%}
+
+###
+# @name AuthForgotPassword_404_UserNotFound
+POST {{baseUrl}}/auth/forgot-password
+Content-Type: {{contentType}}
+
+{
+  "email": "does_not_exist_{{ts}}@example.com"
+}
+
+> {%
+  client.test("forgot-password unknown email: 404", () => client.assert(response.status === 404));
+%}
+
+###
+# @name AuthResetPassword_400_MissingQuery
+POST {{baseUrl}}/auth/reset-password
+Content-Type: {{contentType}}
+
+{
+  "password": "Whatever123!",
+  "confirmPassword": "Whatever123!"
+}
+
+> {%
+  client.test("reset-password without id/token: 400", () => client.assert(response.status === 400));
+%}
+

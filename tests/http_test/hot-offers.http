@@ -1,0 +1,106 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+@ts = {{$timestamp}}
+
+###
+# @name HotOffers_CreateProduct_201
+POST {{baseUrl}}/product/
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Offer Product {{ts}}",
+  "description": "Product for hot-offer tests",
+  "price": 500,
+  "regularPrice": 650,
+  "inStock": 5,
+  "photo": "https://example.com/offer-product-{{ts}}.png",
+  "brand": "BrandH",
+  "processor_type": "Intel",
+  "processor_model": "i5",
+  "generation": "11th",
+  "display": "FHD",
+  "display_size": "15.6",
+  "display_type": "IPS",
+  "ram": "8GB",
+  "ram_type": "DDR4",
+  "hdd": "0",
+  "ssd": "256GB",
+  "graphics": "Integrated",
+  "operating_system": "Windows 11",
+  "features": ["wifi"]
+}
+
+> {%
+  client.test("create product: 201", () => client.assert(response.status === 201));
+  client.global.set("productId", response.body.result.id);
+%}
+
+###
+# @name HotOffers_Create_201
+POST {{baseUrl}}/hot-offer/
+Content-Type: {{contentType}}
+
+{
+  "productId": "{{productId}}",
+  "discount": 10,
+  "endDate": "2099-12-31"
+}
+
+> {%
+  client.test("create hot offer: 201", () => client.assert(response.status === 201));
+  client.global.set("hotOfferId", response.body.result.id);
+%}
+
+###
+# @name HotOffers_Create_400_Duplicate
+POST {{baseUrl}}/hot-offer/
+Content-Type: {{contentType}}
+
+{
+  "productId": "{{productId}}",
+  "discount": 15,
+  "endDate": "2099-12-31"
+}
+
+> {%
+  client.test("duplicate hot offer: 400", () => client.assert(response.status === 400));
+%}
+
+###
+# @name HotOffers_GetAll_200
+GET {{baseUrl}}/hot-offer/
+
+> {%
+  client.test("list hot offers: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name HotOffers_GetById_200
+GET {{baseUrl}}/hot-offer/{{hotOfferId}}
+
+> {%
+  client.test("get hot offer by id: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name HotOffers_Update_201
+PATCH {{baseUrl}}/hot-offer/{{hotOfferId}}
+Content-Type: {{contentType}}
+
+{
+  "discount": 12
+}
+
+> {%
+  client.test("update hot offer: 201 (controller uses 201)", () => client.assert(response.status === 201));
+%}
+
+###
+# @name HotOffers_Delete_201
+DELETE {{baseUrl}}/hot-offer/{{hotOfferId}}
+
+> {%
+  client.test("delete hot offer: 201 (controller uses 201)", () => client.assert(response.status === 201));
+%}
+

@@ -39,11 +39,15 @@ const register = (payload) => __awaiter(void 0, void 0, void 0, function* () {
     return user;
 });
 const login = (payload) => __awaiter(void 0, void 0, void 0, function* () {
-    const user = yield db_1.prisma.user.findUniqueOrThrow({
+    const user = yield db_1.prisma.user.findUnique({
         where: {
             email: payload.email,
         },
     });
+    if (!user) {
+        // Avoid Prisma P2025 bubbling up as "ID is not found" for a non-existent email.
+        throw new appError_1.default(404, "User not found");
+    }
     const correctPass = yield bcrypt_1.default.compare(payload.password, user.password);
     if (!correctPass) {
         throw new appError_1.default(400, "Invalid credentials");

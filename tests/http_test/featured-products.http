@@ -1,0 +1,102 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+@ts = {{$timestamp}}
+
+###
+# @name Featured_CreateProduct_201
+POST {{baseUrl}}/product/
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Featured Product {{ts}}",
+  "description": "Product for featured-product tests",
+  "price": 700,
+  "regularPrice": 800,
+  "inStock": 3,
+  "photo": "https://example.com/featured-product-{{ts}}.png",
+  "brand": "BrandF",
+  "processor_type": "Intel",
+  "processor_model": "i7",
+  "generation": "13th",
+  "display": "QHD",
+  "display_size": "16",
+  "display_type": "IPS",
+  "ram": "16GB",
+  "ram_type": "DDR5",
+  "hdd": "0",
+  "ssd": "1TB",
+  "graphics": "RTX 4050",
+  "operating_system": "Windows 11",
+  "features": ["wifi", "bt"]
+}
+
+> {%
+  client.test("create product: 201", () => client.assert(response.status === 201));
+  client.global.set("productId", response.body.result.id);
+%}
+
+###
+# @name Featured_Create_201
+POST {{baseUrl}}/featured-product/
+Content-Type: {{contentType}}
+
+{
+  "productId": "{{productId}}"
+}
+
+> {%
+  client.test("create featured product: 201", () => client.assert(response.status === 201));
+  client.global.set("featuredId", response.body.result.id);
+%}
+
+###
+# @name Featured_Create_302_Duplicate
+POST {{baseUrl}}/featured-product/
+Content-Type: {{contentType}}
+
+{
+  "productId": "{{productId}}"
+}
+
+> {%
+  client.test("duplicate featured: 302", () => client.assert(response.status === 302));
+%}
+
+###
+# @name Featured_GetAll_200
+GET {{baseUrl}}/featured-product/
+
+> {%
+  client.test("list featured: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Featured_GetById_200
+GET {{baseUrl}}/featured-product/{{featuredId}}
+
+> {%
+  client.test("get featured by id: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Featured_Update_200
+PATCH {{baseUrl}}/featured-product/{{featuredId}}
+Content-Type: {{contentType}}
+
+{
+  "productId": "{{productId}}"
+}
+
+> {%
+  client.test("update featured: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Featured_Delete_200
+DELETE {{baseUrl}}/featured-product/{{featuredId}}
+
+> {%
+  client.test("delete featured: 200", () => client.assert(response.status === 200));
+%}
+

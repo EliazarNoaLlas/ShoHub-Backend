@@ -1,0 +1,71 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+@ts = {{$timestamp}}
+@testEmail = http_test_user_{{ts}}@example.com
+@testPassword = Passw0rd!{{ts}}
+
+###
+# @name Address_Register_201
+POST {{baseUrl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP Address User {{ts}}",
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}"
+}
+
+> {%
+  client.test("register: 201", () => client.assert(response.status === 201));
+  client.global.set("userId", response.body.result.id);
+%}
+
+###
+# @name Address_Upsert_Create_200
+PATCH {{baseUrl}}/address/{{userId}}
+Content-Type: {{contentType}}
+
+{
+  "street": "123 Test St",
+  "postCode": "00001",
+  "city": "Test City",
+  "country": "Testland"
+}
+
+> {%
+  client.test("upsert address create: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Address_GetByUserId_200
+GET {{baseUrl}}/address/{{userId}}
+
+> {%
+  client.test("get address by userId: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Address_Upsert_Update_200
+PATCH {{baseUrl}}/address/{{userId}}
+Content-Type: {{contentType}}
+
+{
+  "street": "456 Updated St",
+  "postCode": "00002",
+  "city": "Updated City",
+  "country": "Updatedland"
+}
+
+> {%
+  client.test("upsert address update: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Address_GetByUserId_404_NotFound
+GET {{baseUrl}}/address/000000000000000000000000
+
+> {%
+  client.test("get address not found: 404", () => client.assert(response.status === 404));
+%}
+

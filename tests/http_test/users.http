@@ -1,0 +1,97 @@
+@baseUrl = http://localhost:5000/api/v1
+@contentType = application/json
+
+@ts = {{$timestamp}}
+@testEmail = http_test_user_{{ts}}@example.com
+@testPassword = Passw0rd!{{ts}}
+
+###
+# @name Users_Register_201
+POST {{baseUrl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+  "name": "HTTP User {{ts}}",
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}",
+  "phone": "+10000000001"
+}
+
+> {%
+  client.test("register: 201", () => client.assert(response.status === 201));
+  client.global.set("userId", response.body.result.id);
+%}
+
+###
+# @name Users_GetAll_200
+GET {{baseUrl}}/user/
+
+> {%
+  client.test("get users: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Users_GetById_200
+GET {{baseUrl}}/user/{{userId}}
+
+> {%
+  client.test("get user by id: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Users_UpdateAvatar_200
+PATCH {{baseUrl}}/user/{{userId}}/update-avatar
+Content-Type: {{contentType}}
+
+{
+  "avatar": "https://example.com/avatar-{{ts}}.png"
+}
+
+> {%
+  client.test("update avatar: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Users_UpdateRoleToAdmin_200
+PATCH {{baseUrl}}/user/{{userId}}
+Content-Type: {{contentType}}
+
+{
+  "role": "ADMIN"
+}
+
+> {%
+  client.test("update role to ADMIN: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Users_LoginAsAdmin_200
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "{{testEmail}}",
+  "password": "{{testPassword}}"
+}
+
+> {%
+  client.test("login: 200", () => client.assert(response.status === 200));
+  client.global.set("adminToken", response.body.result.authToken);
+%}
+
+###
+# @name Users_TopCustomer_200
+GET {{baseUrl}}/user/top-customer
+
+> {%
+  client.test("top-customer: 200", () => client.assert(response.status === 200));
+%}
+
+###
+# @name Users_Delete_200
+DELETE {{baseUrl}}/user/{{userId}}
+
+> {%
+  client.test("delete user: 200", () => client.assert(response.status === 200));
+%}
+
